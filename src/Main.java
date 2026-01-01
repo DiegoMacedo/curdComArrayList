@@ -91,6 +91,17 @@ public class Main {
 
     static void deletar() {
         System.out.println("Deletando");
+        listar();
+
+        System.out.println("Digite o índice do produto");
+        int i = teclado.nextInt();
+
+        if (i >= 0 && i < produtos.size()) {
+            produtos.remove(i);
+            System.out.println("Produto removido");
+        } else {
+            System.out.println("Índice inválido");
+        }
     }
 
     static void sair() {
