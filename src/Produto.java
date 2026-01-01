@@ -6,4 +6,4 @@ public class Produto {
         this.nome = nome;
         this.preco = preco;
     }
-   }
+}
