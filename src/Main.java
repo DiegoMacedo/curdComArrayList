@@ -56,12 +56,18 @@ public class Main{
     }
     static void listar(){
         System.out.println("Listando");
-        for (Produto p: produtos){
-            System.out.println("Nome: " +p.nome + " Preço: " + p.preco );
+        if(produtos.isEmpty()){
+            System.out.println("Nenhum produto cadastrato.");
+            return;
+        }
+        for (int i = 0; i < produtos.size(); i++){
+            Produto p = produtos.get(i);
+            System.out.println(i +" - "+p.nome+ " | R$"+p.preco );
         }
     }
     static void editar(){
         System.out.println("Editando");
+
     }
     static void deletar(){
         System.out.println("Deletando");
